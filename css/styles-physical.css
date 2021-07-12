@@ -1,0 +1,304 @@
+@import "./menu.css";
+
+:root {
+   --primary-gray: #212121;
+   --secondary-gray: #616161;
+   --paragraph-color: #424242;
+ }
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+   color: var(--primary-gray);
+   font-family: 'Roboto', sans-serif;
+   margin: 0;
+}
+
+header {
+  font-size: 14px;
+  color: var(--secondary-gray);
+  position: absolute;
+  top: 64px;
+  width: 188px;
+  left: -232px;
+}
+
+nav details summary {
+  font-weight: bold;
+  line-height: 24px;
+}
+
+header li {
+  margin-bottom: 16px;
+}
+
+nav span {
+  margin-block-end: 24px;
+  display: block;
+}
+
+header a {
+  text-decoration: none;
+  color: var(--secondary-gray)
+ }
+
+header a:hover {
+  color: var(--primary-gray)
+}
+
+.header {
+  position: sticky;
+  top: 0;
+}
+
+.header-content {
+  position: relative;
+}
+
+
+.wrapper {
+  max-width: 902px;
+  margin: auto;
+}
+
+.main-content {
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: 400;
+  margin: 64px 0 16px;
+}
+
+hr {
+  margin: 64px 0;
+}
+
+h2 {
+   font-size: 2em;
+   margin: 0;
+   font-weight: normal;
+}
+
+
+h3 {
+  font-size: 1.5em;
+  margin: 16px 0 24px;
+  font-weight: normal;
+  padding-bottom: 4px;
+  position: sticky;
+  top: 0;
+  background: white;
+}
+
+blockquote {
+  margin: 32px 0;
+  padding-left: 16px;
+  font-size: 24px;
+  line-height: 32px;
+  border-left: 4px solid var(--primary-gray);
+}
+
+blockquote span {
+  color: var(--secondary-gray);
+}
+
+blockquote span::before {
+  content: "-";
+}
+
+pre {
+  background: #FEC62E;
+  padding: 40px;
+  font-family:'Roboto', sans-serif;
+  line-height: 24px;
+  overflow: auto;
+}
+
+.hero {
+  height: 50px;
+  background-image: linear-gradient(to top, rgba(255, 255, 255, .3), transparent), url(../assets/imgs/pattern.png);
+}
+
+.section-content {
+  margin-top: 164px;
+}
+
+.section-content:first-of-type {
+  margin: 0;
+}
+
+.section-content ol li {
+  line-height: 24px;
+}
+
+.section-content ul li {
+  margin-bottom: 16px;
+}
+
+.section-content + hr {
+  display: none;
+}
+
+.section-content img {
+  margin-top: 40px;
+  max-width: 100%;
+}
+
+.main-content {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
+.section-content .dom {
+  margin: 0;
+}
+
+.section-content {
+  counter-reset: titleList;
+}
+
+.section-content h3 {
+  counter-increment: titleList;
+  padding-bottom: 8px;
+}
+
+.section-content h3::before {
+  content: counter(titleList) ". ";
+}
+
+.section-content h3::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: var(--paragraph-color);
+  display: inline-block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+
+.slider-container {
+  display: block;
+  overflow: auto;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  overflow-x: hidden;
+  font-size: 0;
+}
+
+.video {
+  margin: 0;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+}
+
+.slider-bullet-list {
+  text-align: center;
+  margin-block-start: 10px;
+}
+
+.slider-bullet {
+  display: inline-block;
+  inline-size: 15px;
+  block-size: 15px;
+  background: rgba(66, 66, 66, 0.2);
+  border-radius: 50%;
+  margin-inline: 5px;
+}
+
+.slider-bullet:hover {
+  background: var(--paragraph-color);
+}
+
+p a {
+  color: var(--paragraph-color);
+}
+
+.email-text {
+  margin-top: 40px;
+}
+
+.section-content  h2 {
+  margin-bottom: 16px;
+}
+
+.form input {
+  border: 1px solid #616161;
+  border-radius: 90px;
+  width: 100%;
+  height: 48px;
+  box-sizing: border-box;
+  color: var(--h3-color);
+  font-size: 16px;
+  padding: 12px;
+  margin-bottom: 16px;
+  outline-style: none;
+  position: relative;
+}
+
+.form input[type="submit"] {
+  background: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  width: 119px;
+  position: absolute;
+  right: 16px;
+}
+
+footer {
+  background: #212429;
+  height: 170px;
+  margin-top: 92px;
+  color: #fff;
+  visibility: visible;
+  text-align: center;
+  z-index: 1;
+}
+
+footer h5 {
+  font-size: 1.8em;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-content {
+  display: inline-block;
+  margin-top: 50px;
+}
+
+@media screen and (min-width: 780px) {
+  .hero {
+    height: 350px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .form input[type="submit"] {
+    background: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    width: 119px;
+    position: absolute;
+    right: 285px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .form input[type="submit"] {
+    background: #000;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    width: 119px;
+    position: absolute;
+    right: 510px;
+  }
+}

@@ -1,0 +1,388 @@
+@import "./menu.css";
+
+:root {
+   --heading-color: #000;
+   --paragraph-color: #545454;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  color: var(--heading-color);
+  margin: 0;
+}
+
+.header-content {
+  padding-inline: 20px;
+}
+
+header {
+  font-size: 14px;
+  margin-block-start: 20px;
+}
+
+header li {
+  margin-block-end: 16px;
+  inline-size: 100px;
+  padding: 8px;
+}
+
+header li:hover {
+  background: #5551FF;
+}
+
+header a:hover {
+  color: #fff;
+}
+
+nav details summary {
+  font-weight: bold;
+  text-align: start;
+}
+
+header a {
+  text-decoration: none;
+  color: #000;
+ }
+
+.title-content {
+  margin-block-end: 16px;
+  display: block;
+  text-transform: uppercase;
+  text-align: start;
+  color: #000;
+}
+
+.hero {
+  block-size: 50px;
+  background-image: linear-gradient(274.51deg, rgba(74, 0, 224, 0.6) 5%, rgba(142, 45, 226, 0.5) 130.61%), url(../assets/imgs/patron-2.png);
+}
+
+.main-content {
+  padding-inline: 16px;
+  text-align: center;
+}
+
+.wrapper {
+  max-inline-size: 966px;
+  margin: auto;
+}
+
+
+h1 {
+  font-size: 40px;
+  font-weight: bold;
+  margin-block-start: 64px;
+  margin-block-end: 16px;
+}
+
+.main-content p {
+  color: var(--paragraph-color);
+  line-height: 24px;
+}
+
+hr {
+  margin-block-start: 64px;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+  font-size: 32px;
+  font-weight: normal;
+  margin-block-start: 64px;
+  margin-block-end: 0;
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: normal;
+  margin-block: 16px;
+}
+
+.section-content {
+counter-reset: titleList;
+}
+
+.section-content h3 {
+  counter-increment: titleList;
+}
+
+.section-content h3::before {
+  content: counter(titleList, decimal) ". ";
+}
+
+.section-content span {
+  color: #5551FF;
+}
+
+.section-content img {
+  margin-block-start: 40px;
+  margin-block-end: 16px;
+  display: inline-block;
+  max-inline-size: 100%;
+  text-align: center;
+}
+
+.blockquote-container {
+  display: inline-block;
+}
+
+blockquote {
+  margin-block-start: 64px;
+  margin-block-end: 0;
+  border-inline-start: 4px solid #5551FF;
+  padding-inline-start: 16px;
+  text-align: start;
+}
+
+blockquote .blockquote-text {
+  font-size: 24px;
+  font-weight: normal;
+  line-height: 32px;
+  color: #000;
+}
+
+.blockquote-text span {
+  color: #000;
+}
+
+blockquote span::before {
+  content: "- ";
+  color: #000;
+}
+
+.hidden-hr {
+  display: none;
+}
+
+.key-concepts h3 {
+  margin-block-start: 40px;
+  margin-block-end: 16px;
+}
+
+.key-concepts img {
+  margin: 0;
+}
+
+pre {
+  border: 8px solid #5551FF;
+  box-shadow: -10px 10px 0px #ABAAF6;
+  border-radius: 8px;
+  padding: 40px;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: start;
+  overflow: auto;
+}
+
+.model-box-section {
+  margin-block-start: 155px;
+  text-align: start;
+}
+
+.model-box-section h2 {
+  margin-block-end: 40px;
+}
+
+.model-box-section h3 {
+  margin-block-start: 40px;
+}
+
+.model-box-section ol li, ul li {
+  line-height: 24px;
+  color: var(--paragraph-color);
+}
+
+.model-box-section ul li {
+  list-style-image: url(../assets/imgs/ellipse.png);
+  padding-inline-start: 8px;
+}
+
+.videos-content h2 {
+  margin-block-start: 40px;
+  margin-block-end: 16px;
+  text-align: start;
+  font-size: 24px;
+}
+
+.slider-container {
+  display: block;
+  overflow: auto;
+  scroll-behavior: smooth;
+  white-space: nowrap;
+  overflow-x: hidden;
+  font-size: 0;
+}
+
+.slider-bullet-list {
+  text-align: center;
+  margin-block-start: 16px;
+}
+
+.slider-bullet {
+  display: inline-block;
+  inline-size: 16px;
+  block-size: 16px;
+  background: rgba(142, 45, 226, 0.5);
+  border-radius: 50%;
+  margin-inline: 5px;
+}
+
+.slider-bullet:active {
+  background: #5551FF;
+}
+
+.video {
+  margin: 0;
+  display: inline-block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16/9;
+}
+
+.email-text {
+  margin-block: 40px;
+  text-align: start;
+}
+
+.email-text a {
+  color: var(--paragraph-color);
+}
+
+.newsletter-section h2 {
+  margin-block-start: 0;
+  margin-block-end: 16px;
+  text-align: start;
+  font-size: 24px;
+}
+
+.form input {
+  border: 1px solid #000;
+  border-radius: 90px;
+  inline-size: 280px;
+  block-size: 48px;
+  box-sizing: border-box;
+  color: var(--heading-color);
+  font-size: 16px;
+  padding-block: 12px;
+  padding-inline: 16px;
+  margin-block-start: 16px;
+  margin-block-end: 16px;
+  outline-style: none;
+  text-align: center;
+  position: relative;
+}
+
+.form input[type="submit"] {
+  background: #5551FF;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  inline-size: 110px;
+  position: relative;
+  inset-inline-end: 60px;
+  position: absolute;
+}
+
+.form input::-webkit-input-placeholder {
+  color: var(--heading-color);
+}
+
+footer {
+  background: #000;
+  block-size: 170px;
+  margin-block-start: 92px;
+  color: #fff;
+  visibility: visible;
+  text-align: center;
+}
+
+footer h5 {
+  font-size: 1.8em;
+  font-weight: normal;
+  margin: 0;
+}
+
+.footer-content {
+  display: inline-block;
+  margin-block-start: 50px;
+}
+
+
+@media screen and (min-width: 780px) {
+
+  .header {
+    position: sticky;
+    inset-block-start: -65px;
+  }
+
+  .header-content {
+    position: relative;
+    inset-block-start: 30px;
+    padding-inline: 0;
+  }
+
+  header {
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: -208px;
+    inline-size: 188px;
+    direction: rtl;
+  }
+
+  .title-content {
+    text-align: end;
+  }
+
+  nav details summary {
+    font-weight: bold;
+    text-align: end;
+  }
+
+  header li {
+    direction: ltr;
+    text-align: start;
+  }
+
+  h1 {
+    font-size: 64px;
+    font-weight: normal;
+    margin-block-start: 64px;
+    margin-block-end: 16px;
+  }
+
+  .form {
+    text-align: start;
+  }
+
+  .form input {
+    border: 1px solid #616161;
+    border-radius: 90px;
+    inline-size: 280px;
+    block-size: 48px;
+    box-sizing: border-box;
+    color: var(--h3-color);
+    font-size: 16px;
+    padding-block: 12px;
+    padding-inline: 16px;
+    margin-inline-end: 16px;
+    outline-style: none;
+  }
+
+  .form input[type="submit"] {
+    background: #5551FF;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    inline-size: 119px;
+    inset-inline-end: 90px;
+    position: relative;
+  }
+
+  .hero {
+    block-size: 350px;
+  }
+}
